@@ -1,0 +1,39 @@
+# -*- coding: UTF-8 -*-#
+#------------------------------------
+# Name:         config
+# Description:  
+# Author:       wangjx
+# Date:         2022/09/22
+#------------------------------------
+
+#---------邀请码掩码规格-------
+# + 号代表哪些数字或字母
+jiahao: &jiahao 0123456789
+# * 号代表哪些数字或字母
+xinghao: &xinghao abcdef
+# ？ 号代表哪些数字或字母
+wenhao: &wenhao 0123456789abcdef
+
+#---------超级鹰相关信息-------
+# 账号
+user: &user 超级鹰账号
+# 密码
+pass2: &pass2 超级鹰密码
+# appID
+softid: &softid 超级鹰应用ID
+
+#---------注册草榴账号信息-------
+#用户名
+regname: &regname 注册用户名
+#密码
+regpwd: &regpwd 注册密码
+#邮箱
+regemail: &regemail 注册邮箱
+
+
+# 常规配置信息， 草榴地址和验证码地址
+
+url: &url https://www.t66y.com/register.php?
+# url: &url https://cl.9602x.xyz/register.php?
+validateUrl: &validateUrl https://www.t66y.com/require/codeimg.php?0.
+# validateUrl: &validateUrl https://cl.9602x.xyz/require/codeimg.php?0.

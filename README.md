@@ -65,4 +65,5 @@ regemail: &regemail 注册邮箱
 python main.py  
 ```
 
+## 随手写的，很是粗糙，请见谅
 

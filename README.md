@@ -14,11 +14,14 @@
 
 ## 安装python环境
 需要安装python3 环境， 最好是3.8以上的环境
-同时需要安装python 如 yaml 、prestool 等库
+同时需要安装python 如 yaml 、prestool 、 urllib3 、 requests 等库
+```
 pip install pyyaml
 pip install prestool
 pip install requests
 pip install urllib3
+```
+
 
 ## 注册超级鹰账号并充值
 因为之前想用百度的OCR识别，但是百度的OCR识别草榴的验证码成功率太低了，所以找到了超级鹰，这个识别率相当的高。

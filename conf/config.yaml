@@ -1,13 +1,45 @@
-code : '*da211eb*c4dd1*d'
-index: 9
+# -*- coding: UTF-8 -*-#
+#------------------------------------
+# Name:         config
+# Description:
+# Author:       wangjx
+# Date:         2022/09/22
+#------------------------------------
+
+#---------邀请码掩码规格-------
+# + 号代表哪些数字或字母
 jiahao: 0123456789
-pass2: 超级鹰密码
-regemail: 注册邮箱
-regname: 注册用户名
-regpwd: 注册密码
-softid: 超级鹰应用ID
-url: https://www.t66y.com/register.php?
-user: 超级鹰账号
-validateUrl: https://www.t66y.com/require/codeimg.php?0.
-wenhao: 0123456789abcdef
+# * 号代表哪些数字或字母
 xinghao: abcdef
+# ？ 号代表哪些数字或字母
+wenhao: 0123456789abcdef
+
+#---------超级鹰相关信息-------
+# 账号
+user: 超级鹰账号
+# 密码
+pass2: 超级鹰密码
+# appID
+softid: 超级鹰应用ID
+
+#---------注册草榴账号信息-------
+#用户名
+regname: 注册用户名
+#密码
+regpwd: 注册密码
+#邮箱
+regemail: 注册邮箱
+
+
+# 常规配置信息， 草榴地址和验证码地址
+
+url: https://www.t66y.com/register.php?
+# url:  https://cl.9602x.xyz/register.php?
+validateUrl: https://www.t66y.com/require/codeimg.php?0.
+# validateUrl:  https://cl.9602x.xyz/require/codeimg.php?0.
+
+#执行的序号
+index: 0
+
+#要破解的邀请码
+code ： '*da211eb*c4dd1*d'

@@ -286,6 +286,7 @@ class CodeSearch1024():
             result = self.doReg(codeList[idx], 0)
             if result == 'found':
                 writeLog('code{} found！'.format(codeList[idx]))
+                idx = idx + 1
                 return
             else:
                 writeLog('code{} result:{} ！'.format(codeList[idx], result))

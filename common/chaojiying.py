@@ -8,16 +8,8 @@
 #------------------------------------
 
 from hashlib import md5
-from prestool.Tool import Tool
-import time
 import requests
-from lxml import etree
-import random
-from urllib import request
 import urllib3
-
-from common.getDate import getDate
-from common.writeLog import writeLog
 import yaml
 
 urllib3.disable_warnings()

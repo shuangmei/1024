@@ -35,8 +35,10 @@ if __name__ == '__main__':
         url = yobj.get('url')
         validateUrl = yobj.get('validateUrl') +  tool.random_number(16)
         reg = common.get1024Code.CodeSearch1024(code, url, validateUrl, charsList[0], charsList[1], charsList[2], charsList[3], 0, 0, 0, 0)
-        codeList  = reg.start(False)
-        reg.forCheckCode(codeList)
-            
+        codeList = reg.start(False)
+        reg.forCheckCode(codeList, 0, code)
+
+
+
     else:
         writeLog('不能处理大于4个隐藏字符的邀请码')

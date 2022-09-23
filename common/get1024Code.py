@@ -7,13 +7,10 @@
 # Date:         2022/09/22
 #------------------------------------
 
-from hashlib import md5
-from prestool.Tool import Tool
+
 import time
 import requests
-from lxml import etree
 import random
-from urllib import request
 import urllib3
 
 
@@ -283,12 +280,12 @@ class CodeSearch1024():
             return self.doReg(code, n + 1)  # 递归
 
     #循环验证码list
-    def forCheckCode(self, codeList):
-        for i in range(len(codeList)):
-            result = self.doReg(codeList[i], 0)
+    def forCheckCode(self, codeList, idx, oldCode):
+        while idx < len(codeList):
+            writeLog('codeList idx：{} 和 code：{} 原掩码code：{}'.format(idx, codeList[idx], oldCode))
+            result = self.doReg(codeList[idx], 0)
             if result == 'found':
-                writeLog('code{} found！'.format(codeList[i]))
+                writeLog('code{} found！'.format(codeList[idx]))
                 return
             else:
-                writeLog('code{} result:{} ！'.format(codeList[i], result))
-        
+                writeLog('code{} result:{} ！'.format(codeList[idx], result))

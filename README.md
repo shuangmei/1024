@@ -107,13 +107,6 @@ index: ？
 这里的 ？ 修改为 0 即可，表示从头开始 如果不为0 表示接着执行，
 一般情况下， 修改为 0 即可
 
-
-```angular2html
-reg.forCheckCode(codeList, 0, code)
-改为
-reg.forCheckCode(codeList, 220, code)
-```
-
 ## 注意事项
 1.  get1024Code.py 里的 cookie  建议修改为你们电脑上的，不要使用我这里的提供的cookie 
 容易导致注册的账号被禁用

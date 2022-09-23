@@ -112,9 +112,21 @@ reg.forCheckCode(codeList, 220, code)
 ```
 
 ## 注意事项
-1. cookie 这里的cookie 建议修改为 其它的，不要使用我这里的提供的cookie 
+1.  get1024Code.py 里的 cookie  建议修改为你们电脑上的，不要使用我这里的提供的cookie 
 容易导致注册的账号被禁用
+```angular2html
 
+headers 里的
+
+'Cookie': "227c9_ipfrom=7bad9dd8b54d6492055fd5fb17ceebfe%09%C3%C0%B9%FA%B5%C2%BF%CB%C8%F8%CB%B9%D6%DD; 227c9_postReplyLastData=52898511024; PHPSESSID=b5du61ech524gbalm310midvo1; 227c9_lastvisit=0%091663771232%09%2Fregister.php%3F",
+
+headers1 里的
+
+'Cookie': "227c9_ipfrom=7bad9dd8b54d6492055fd5fb17ceebfe%09%C3%C0%B9%FA%B5%C2%BF%CB%C8%F8%CB%B9%D6%DD; 227c9_postReplyLastData=52898511024; PHPSESSID=b5du61ech524gbalm310midvo1; 227c9_lastvisit=0%091663771232%09%2Fregister.php%3F",
+
+
+```
+其实这两个headers 是可以合并的，之前测试过，只用headers 就可以
 
 
 ## 随手写的，很是粗糙，请见谅

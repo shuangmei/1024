@@ -284,9 +284,9 @@ class CodeSearch1024():
         while idx < len(codeList):
             writeLog('codeList idx：{} 和 code：{} 原掩码code：{}'.format(idx, codeList[idx], oldCode))
             result = self.doReg(codeList[idx], 0)
+            idx = idx + 1
             if result == 'found':
                 writeLog('code{} found！'.format(codeList[idx]))
-                idx = idx + 1
                 return
             else:
                 writeLog('code{} result:{} ！'.format(codeList[idx], result))

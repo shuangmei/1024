@@ -15,9 +15,9 @@ import urllib3
 
 
 from common.writeLog import writeLog
-import common.chaojiying 
-import yaml
-
+import common.chaojiying
+from common.rwyaml import read_yaml
+from common.rwyaml import write_yaml
 urllib3.disable_warnings()
 
 
@@ -206,18 +206,13 @@ class CodeSearch1024():
         
     #请求检测验证码
     def RegUser(self, code):
-        with open('conf/config.yaml') as yfile:
-            try:
-                yobj = yaml.safe_load(yfile)
-            except yaml.YAMLError as error:
-                print(error)
-                
+
         validate = self.getInvCoce()
         payload = {
-            'regname': yobj.get('regname'),
-            'regpwd': yobj.get('regpwd'),
-            'regpwdrepeat': yobj.get('regpwd'),
-            'regemail': yobj.get('regemail'),
+            'regname': read_yaml('regname'),
+            'regpwd': read_yaml('regpwd'),
+            'regpwdrepeat': read_yaml('regpwd'),
+            'regemail': read_yaml('regemail'),
             'invcode': code,
             'validate': validate,
             'forward': '',
@@ -283,6 +278,7 @@ class CodeSearch1024():
     def forCheckCode(self, codeList, idx, oldCode):
         while idx < len(codeList):
             writeLog('codeList idx：{} 和 code：{} 原掩码code：{}'.format(idx, codeList[idx], oldCode))
+            write_yaml('index', idx)
             result = self.doReg(codeList[idx], 0)
             idx = idx + 1
             if result == 'found':
